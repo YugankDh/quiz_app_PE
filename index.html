@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Application - Assignment 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <div class="container">
+        <header class="header">
+            <div>
+                <h1>Interactive Quiz Application</h1>
+                <p class="subtitle">Assignment 10: JavaScript Behaviour & Test Matrix</p>
+            </div>
+            <button id="themeToggleBtn" class="btn-theme" type="button" aria-label="Toggle Theme">
+                <span id="themeLabel">Dark Mode</span>
+            </button>
+        </header>
+
+        <main class="card">
+            <div class="progress-bar-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <div id="quizContainer">
+                <div class="question-header">
+                    <span id="questionCounter" class="badge">Question 1 of 5</span>
+                </div>
+                <h2 id="questionText" class="question-text">Loading question...</h2>
+                <div id="optionsContainer" class="options-grid"></div>
+
+                <div class="actions">
+                    <button id="nextBtn" class="btn primary-btn" disabled>Next Question</button>
+                </div>
+            </div>
+
+            <div id="resultsContainer" class="results hidden">
+                <h2>Quiz Complete!</h2>
+                <p class="result-message">Your Final Score:</p>
+                <div class="score-display">
+                    <span id="finalScore">0</span> / <span id="totalQuestions">5</span>
+                </div>
+                <p id="scoreFeedback" class="feedback-text"></p>
+                <button id="restartBtn" class="btn primary-btn">Restart Quiz</button>
+            </div>
+        </main>
+
+        <section class="test-matrix-info">
+            <h3>Verified Test Matrix (Assignment 10)</h3>
+            <ul>
+                <li><strong>M1:</strong> All 5 correct &rarr; 5/5</li>
+                <li><strong>M2:</strong> All 5 incorrect &rarr; 0/5</li>
+                <li><strong>M3:</strong> 3 correct, 2 incorrect &rarr; 3/5</li>
+                <li><strong>M4:</strong> Click same correct answer twice &rarr; Counts once</li>
+                <li><strong>M5:</strong> After question 4 &rarr; Final score not shown until Q5 is answered</li>
+                <li><strong>M6:</strong> Reload page &rarr; Score resets to 0</li>
+            </ul>
+            <p><a href="../../index.html" class="back-link">&larr; Back to Portfolio</a></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
